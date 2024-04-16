@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+      background-color: #ede9c6; /* Light Gray Background */
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333333; /* Dark Gray Text */
+    }
+    form {
+      margin-top: 20px;
+    }
+    label {
+      display:block;
+      font-size: 16px;
+      color: #333333;
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"], 
+    select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #cccccc; /* Light Gray Border */
+      border-radius: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    input[type="radio"] {
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #007bff; /* Blue Submit Button */
+      color: #ffffff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3; /* Darker Blue on Hover */
+    }
+    p {
+      text-align: center;
+      margin-top: 20px;
+      color: #666666; /* Gray Text */
+    }
+    a {
+      color: #007bff; /* Blue Link */
+      font-weight: bold;
+      text-decoration: none;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+    input:focus {
+      outline: none;
+      border: 1px solid #007bff; /* Focus Border Color */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form action="thankyou.html" method="post">
+      <img src="signup.png" alt="Sample Image">
+      <label for="Firstname">First Name:</label> 
+      <input type="text" id="Firstname" name="Firstname" required>
+
+      <label for="Lastname">Last Name:</label>
+      <input type="text" id="Lastname" name="Lastname" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter your phone number" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label>Gender:</label>
+      <label>
+        <input type="radio" id="gender-male" name="gender" value="male" required>
+        Male
+      </label>
+      <label>
+        <input type="radio" id="gender-female" name="gender" value="female" required>
+        Female
+      </label>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="United-States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="London">London</option>
+        <option value="India">India</option>
+        <option value="Mexico">Mexico</option>
+      </select>
+
+      <input type="submit" value="Signup">
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Build Inquiry Form using HTML and CSS</title>
+
+	<style>
+		/* Styling the Body element i.e. Color, Font, Alignment */
+		html {
+        background-size: cover;
+        background-image: url(image.png);
+        }
+
+		body {
+			font-family: 'Times New Roman', Times, serif;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 10px auto;
+			padding: 10px 10px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: #007bff;
+      		color: #ffffff;
+      		padding: 10px 0;
+      		border: none;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		p {
+		text-align: center;
+		margin-top: 20px;
+		color: #333333;
+		}
+		a {
+		color: #007bff;
+		font-weight: bold;
+		text-decoration: none;
+		}
+
+	</style>
+</head>
+
+<body>
+  <img src="logo.png" alt="Sample Image" class="form-image" height="150" >
+	<!-- Create Form -->
+	<form id="form" action="thankyoufb.html" method="post">
+
+		<h1>Gift Inquiry</h1>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email" id="email" placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			<label for="num" id="num">
+				Number of Gifts
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="number" id="num" placeholder="Enter the number of gifts needed" min="1" max="250"/>
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Type of Gifting
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role">
+				<option value="wedding">Wedding</option>
+				<option value="birthday">Birthday</option>
+				<option value="anniversary">Anniversary</option>
+				<option value="corporate">Corporate Event</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>Items to be included
+				<small>(Check all that apply)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			<label for="inp-1">
+				<input type="checkbox"
+					name="inp">Chocolates</input></label>
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">Candles</input></label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">Card</input></label>
+			<label for="inp-4">
+				<input type="checkbox"
+					name="inp">Coffee Mug</input></label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">Cookies</input></label>
+			<label for="inp-6">
+				<input type="checkbox"
+					name="inp">Keychain</input></label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">Notebook</input></label>
+		</div>
+
+		<div class="form-control">
+			<label for="address" id="address">
+				Address/Delivery Location
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="address" id="address" placeholder="Enter delivery location" />
+		</div>
+
+		<div class="form-control">
+			<label for="budget" id="budget">
+				Approximate Budget
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="budget" placeholder="Enter approximate budget for each gift" min="1"/>
+		</div>
+
+
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="comment" placeholder="Enter your comment here">
+			</textarea>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Would you recommend ArtisanCove to a friend?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio" id="recommed-1" name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio" id="recommed-2" name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio" id="recommed-3" name="recommed">Maybe</input>
+			</label>
+		</div>
+
+		<button type="submit" value="submit">
+			Submit
+		</button>
+
+		<p> Go back to Login Page <a href="login.html"> Login </a></p>
+
+	</form>
+
+</body>
+
+</html>
